@@ -36,7 +36,7 @@ export default function App() {
     }
 
     useEffect(() => {
-        fetch(`http://ponyapi.net/v1/character/by-residence/ponyville`)
+        fetch(`https://ponyapi.net/v1/character/by-residence/ponyville`)
             .then(res=>res.json())
             .then((data) => {
                 let list = new Set();
