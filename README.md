@@ -4,7 +4,7 @@ A memory game made with React for the Odin Project's React course! This is manly
 
 This project uses the [PonyAPI](https://ponyapi.net) for fetching the images of MLP characters and their names!
 
-Unfortunately, the API is only http and not https, so there is no way for me to currently host it. I'm looking into fixing this issue currently.
+Here is a [link to the playable game!(hosted on netlify)](https://mlp-memory-game.netlify.app)
 
 ## How to play
 
