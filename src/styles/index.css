@@ -3,11 +3,21 @@
   https://www.joshwcomeau.com/css/custom-css-reset/
   with slight edits made by Me!
 */
+@font-face {
+    font-family: "celestia-redux";
+    src: url("./../../fonts/CelestiaMediumRedux-dJdX.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "comic shanns mono nerdfont";
+    src: url("./../../fonts/ComicShannsMonoNerdFont-Regular.woff2") format("woff2");
+    font-display: swap;
+}
 *, *::before, *::after {
     box-sizing: border-box;
 }
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "comic shanns mono nerdfont", system-ui, Avenir, Helvetica, Arial, sans-serif;
   --game-board: #aceef7;
   --text: rgb(85, 69, 233);
   --background: #7ca8a1;
@@ -16,8 +26,11 @@
 *:not(dialog) {
     margin: 0;
 }
+h1, h2, h3, button > p {
+    font-family: "celestia-redux";
+}
 body {
-    line-height: calc(1em + 0.5rem);
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     height: 100vh;
 }
@@ -111,10 +124,11 @@ body {
     transition: 200ms transform;
     & > p {
         text-shadow: rgb(0, 4, 53) 0px 4px 5px;
-        transform: translate(0px, 60px);
+        transform: translate(0px, 40px);
         font-size: clamp(min(1rem, 100%), 2rem, 5rem);
         font-weight: 800;
         color: rgb(255, 219, 119);
+        line-height: 1;
     }
 }
 .card:hover {
@@ -123,35 +137,44 @@ body {
 
 .score-area {
     width: 300px;
+    flex: 0 0 1;
+    font-size: 24px;
     padding: 2rem;
     background: var(--highlight);
     border-top-left-radius: 25px;
     border-bottom-left-radius: 25px;
-    align-self: flex-end;
+    align-self: center;
     color: var(--text);
-
 }
-
+header h1, header p, .score-area {
+    padding: 1.5rem;
+    background: var(--highlight);
+}
+header h1 {
+    padding: 2.4rem;
+}
 header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     gap: 1rem;
-    align-items: stretch;
+    align-items: center;
+    text-align: center;
     color: var(--text);
 }
 header h1 {
+    align-self: center;
+    font-size: 40px;
+    flex: 0 0 1;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
-}
-header h1, header p {
-    background: var(--highlight);
-    padding: 2rem;
 }
 header p {
     border-radius: 25px;
     max-width: 70ch;
     font-size: 20px;
+    align-self: center;
+    flex: 1 1 0;
 }
 
 footer {
@@ -159,7 +182,7 @@ footer {
     justify-content: center;
     align-items: center;
     display: flex;
-    gap:1 rem;
+    gap: 1rem;
     flex-direction: column;
     background: var(--highlight);
 }
@@ -178,6 +201,9 @@ footer ul {
     max-width: 300px;
     min-height:300px;
     max-height:300px;
+    > p {
+        transform: translate(0, 100px);
+    }
     }
 }
 

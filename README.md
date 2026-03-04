@@ -9,3 +9,8 @@ Here is a [link to the playable game!(hosted on netlify)](https://mlp-memory-gam
 ## How to play
 
 Click on as many cards without them being the same as you can! How many can you remember before clicking a card more than once?
+
+### Fonts used:
+
+- <a href="https://www.fontspace.com/celestia-redux-font-f23536" target="_blank" rel="noopener noreferrer">Celestia Medium Redux</a>
+- <a href="https://www.nerdfonts.com/font-downloads" target="_blank" rel="noopener noreferrer">ComicShannsMono Nerd Font</a>
